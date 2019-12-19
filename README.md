@@ -14,13 +14,15 @@ About the project:
 
 This is a set of code which searches a reference species' cDNA genome for genes which have a high GC content (defined as GC content > 0.750) then uses these sequencces as queries against the species of interest genome assembly to see if these high GC content regions have been conserved across the species. In our case, we did our project comparing the well-studied and well-sequenced Rat (Rattus norvegicus) against the comparatively poorly-studied Fat Sand Rat (Psammomys obesus).
 
-## Getting Started
+### Prerequisites
 
 Download cDNA genome as a FASTA file of reference species from Ensembl - download the 'cdna.all' version. 
 Download latest genome assembly of species of interest.
 E.g., for our proof of concept we compared high GC content genes from the Rat (Rattus norvegicus) and Blasted those output genes against the Fat Sand Rat (Psammomys obesus) genome assembly. We used a P. obesus genome assembly given to us by Adam Hargreaves (adam.hargreaves@zoo.ox.ac.uk, https://www.zoo.ox.ac.uk/people/dr-adam-hargreaves).
 
-### Prerequisites
+## Getting Started
+
+Work off of the code from Update01 Branch - this is the most recent and most up-to-date set of code.
 
 We worked on a Linux Ubuntu system. The code is written for Python 3 and meant to be saved as a script and then run from the command line:
 ```
