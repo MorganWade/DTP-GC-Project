@@ -2,9 +2,13 @@
 
 Code & documentation for the Dark Gene Brigade's DTP Michaelmas 2019 Bioinformatics Hackathon project: Exploring GC-biased mutation across the metazoa. Project members: Jack Gordon, Jacques Bouvier, Joe Morford, Morgan Wade, Ryan Carter, Sam Caygill.
 
-Aim: Build a tool which is able to 1) Identify GC rich genes in a reference genome, 2) Search for these genes in a species of interest.
+Aim: Build a tool which is able to 
+1) Identify GC rich genes in a reference genome, 
+2) Search for these genes in a species of interest.
 
-Approach: 1) Python programme to identify GC rich genes, 2) BLAST analysis to search for genes in genome of interest
+Approach: 
+1) Python programme to identify GC rich genes, 
+2) BLAST analysis to search for genes in genome of interest
 
 Background:
 
