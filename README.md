@@ -58,8 +58,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Authors
 
-Jack Gordon, Jacques Bouvier, Joe Morford, Morgan Wade, Ryan Carter, Sam Caygill. All from the University of Oxford's BBSRC Doctoral Training Program (http://www.biodtp.ox.ac.uk/).
+Jack Gordon (jack.gordon@stcatz.ox.ac.uk), Jacques Bouvier (jacques.bouvier@stx.ox.ac.uk), Joe Morford (joe.morford@merton.ox.ac.uk), Morgan Wade (morgan.wade@hertford.ox.ac.uk), Ryan Carter(ryan.carter@stx.ox.ac.uk), Sam Caygill (samuel.caygill@hertford.ox.ac.uk). All from the University of Oxford's BBSRC Doctoral Training Program (http://www.biodtp.ox.ac.uk/).
 
+For questions or comments, please contact Joe Morford joe.morford@merton.ox.ac.uk or Jacques Bouvier jacques.bouvier@stx.ox.ac.uk
 
 ## Acknowledgments
 
