@@ -40,7 +40,7 @@ This is because we realized BLAST might find some of the shorter query sequences
 
 Original: all query sequences in one file, this file gets BLASTed against species of interest genome, number of hits taken, percentage of hits calculated.
 
-Update01: query sequences in separate files, each file gets BLASTed against sepecies of interest genome, binary statistics calculations - were there hits or not? <-- mean to control for the same query sequence potentially popping up multiple times in the genome
+Update01: query sequences in separate files, each file gets BLASTed against sepecies of interest genome, binary statistics calculations - were there hits or not? <-- meant to control for the same query sequence potentially popping up multiple times in the genome
 
 
 ## Running the Code
