@@ -1,4 +1,4 @@
-#code to make query sequence ready for blast
+#code to make query sequence file ready for blast
 
 
 def makeQuery(fasta_input, species):
@@ -17,7 +17,7 @@ def makeQuery(fasta_input, species):
 makeQuery("../Rodent/Rattus_norvegicus_output.fasta", "../Rodent/Rattus_norvegicus")
 
 
-
+#code to make a separate file with the number of query sequences
 
 def sequenceCounter(species):
 	with open(species + "_query.txt", "r") as g, open(species + "_query_counter.txt", "w") as h:
