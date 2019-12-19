@@ -21,8 +21,12 @@ This is a set of code which searches a reference species' cDNA genome for genes 
 ### Prerequisites
 
 Download cDNA genome as a FASTA file of reference species from Ensembl - download the 'cdna.all' version. 
-Download latest genome assembly of species of interest.
-E.g., for our proof of concept we compared high GC content genes from the Rat (Rattus norvegicus) and Blasted those output genes against the Fat Sand Rat (Psammomys obesus) genome assembly. We used a P. obesus genome assembly given to us by Adam Hargreaves (adam.hargreaves@zoo.ox.ac.uk, https://www.zoo.ox.ac.uk/people/dr-adam-hargreaves).
+Download latest genome assembly of species of interest as a FASTA file.
+
+E.g., for our proof of concept we compared high GC content genes from the Rat (Rattus norvegicus) and BLASTed those output genes against the Fat Sand Rat (Psammomys obesus) genome assembly. We used a P. obesus genome assembly given to us by Adam Hargreaves (adam.hargreaves@zoo.ox.ac.uk, https://www.zoo.ox.ac.uk/people/dr-adam-hargreaves).
+
+*we have not uploaded sample genome data here due to file size, but here is the link to the Ensembl page where we downloaded our Rat genome: http://www.ensembl.org/Rattus_norvegicus/Info/Index and here is a link to the latest genome assembly of the Fat Sand Rat from NCBI: ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/215/935/GCA_002215935.1_ASM221593v1/GCA_002215935.1_ASM221593v1_genomic.fna.gz*
+
 
 ## Getting Started
 
@@ -55,9 +59,18 @@ Create a directory for your project as a whole, e.g., 'GC_Project' and within th
 As part of the scripts you will generate the additional directories you will need, e.g., making a BLAST-able database and saving it to a new subdirectory.
 
 
-## Example Outputs
+## Example Outputs - Proof of Concept
 
-Add additional notes about how to deploy this on a live system
+Q1: Are there GC rich genes in the Rat genome that are 'missing' in the gerbil genome?
+
+Result: Identified GC rich genes in the rat genome --> BLASTed these genes against the gerbil genome --> 2/13 genes were present in the gerbil genome --> Missing genes included FRAT2, TRNP1, BRI3
+  
+However, it is unlikely these genes are actually missing - more likely they have not been assembled in the P. obesus genome. We are working off of an older P. obesus genome assembly, so it is possible that the most current assembly may contain these genes or their homologs.
+
+
+Q2: Are GC genes more likely to be missing?
+
+Result: We also used our tool to see if GC rich genes were more likely to be missing compared to random samples of genes from the reference genome. To do this, we conducted queries using GC rich genes and compared the hit % to the hit % for a series of random samples of genes from the same rat genome. This confirmed earlier observations mentioned in the introduction that GC rich genes were more likely to be missing from genome assemblies. 
 
 
 ## Authors
