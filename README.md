@@ -25,7 +25,7 @@ Download latest genome assembly of species of interest as a FASTA file.
 
 E.g., for our proof of concept we compared high GC content genes from the Rat (Rattus norvegicus) and BLASTed those output genes against the Fat Sand Rat (Psammomys obesus) genome assembly. We used a P. obesus genome assembly given to us by Adam Hargreaves (adam.hargreaves@zoo.ox.ac.uk, https://www.zoo.ox.ac.uk/people/dr-adam-hargreaves).
 
-*we have not uploaded sample genome data here due to file size, but here is the link to the Ensembl page where we downloaded our Rat genome: http://www.ensembl.org/Rattus_norvegicus/Info/Index and here is a link to the latest genome assembly of the Fat Sand Rat from NCBI: ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/215/935/GCA_002215935.1_ASM221593v1/GCA_002215935.1_ASM221593v1_genomic.fna.gz*
+*we have not uploaded sample genome data here due to file size, but here is the link to the Ensembl page where we downloaded our Rat genome: http://www.ensembl.org/Rattus_norvegicus/Info/Index and here is a link to the latest genome assembly of the Fat Sand Rat from NCBI: ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/215/935/GCA_002215935.1_ASM221593v1/GCA_002215935.1_ASM221593v1_genomic.fna.gz *
 
 
 ## Notes on the Versions
