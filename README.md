@@ -30,14 +30,31 @@ E.g., for our proof of concept we compared high GC content genes from the Rat (R
 
 ## Notes on the Versions
 
-There are two sets of scripts, each saved in it's own branch. This README.md is for all of tthem. - one in which all the query sequences from one species are in the same file & that query file as a whole gets BLASTed against the genome of interest and another where each query sequence is in a separate file and each separate query gets BLASTed against the genome of interest. 
+There are three sets of scripts, each saved in it's own branch. This README.md is for all of them. 
 
-This is because we realized BLAST might find some of the shorter query sequences multiple times in each genome, thereby artificially altering the hit count. So we changed it to BLAST each query separately, that way we can take it as a binary output - were there hits or not - for each query. 
+*The original approach:*
+All the query sequences from one species are in the same file & that query file as a whole gets BLASTed against the genome of interest 
 
-Original - Main Branch: all query sequences in one file, this file gets BLASTed against species of interest genome, number of hits taken, percentage of hits calculated.
+*Update01:*
+Each query sequence is in a separate file and each separate query gets BLASTed against the genome of interest. 
 
-Update01 - Update01 Branch: query sequences in separate files, each file gets BLASTed against sepecies of interest genome, binary statistics calculations - were there hits or not? <-- meant to control for the same query sequence potentially popping up multiple times in the genome
+--> Why two approaches?
 
+We realized BLAST might find some of the shorter query sequences multiple times in each genome, thereby artificially altering the hit count. So we changed it to BLAST each query separately, that way we can take it as a binary output - were there hits or not - for each query. 
+
+*Stats scripts:*
+Scripts to generate: 
+- random samples of genes from the reference genome to create a null distribution of % hits to see if GC-rich rat genes are less likely to be found in the gerbil genome than are GC-normal genes
+- the data needed to run a general linear model on sequence length and GC content to determine if sequence length is a better predictor of missing genes than GC content
+
+
+Branches:
+
+Main Branch = original approach: all query sequences in one file, this file gets BLASTed against species of interest genome, number of hits taken, percentage of hits calculated.
+
+Update01 Branch = Update01 : query sequences in separate files, each file gets BLASTed against sepecies of interest genome, binary statistics calculations - were there hits or not? <-- meant to control for the same query sequence potentially popping up multiple times in the genome
+
+Stats Branch = Stats
 
 ## Getting Started
 
