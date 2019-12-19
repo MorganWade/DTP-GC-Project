@@ -57,6 +57,9 @@ Update01 Branch = Update01 : query sequences in separate files, each file gets B
 
 Stats Branch = Stats scripts
 
+mappingGCcontentTOchromosomes : Branch containing an R script and a python3 script for generating histograms of frequency of GC content across chromosomes for the Rat (Rattus norvegicus) genome. This is useful primarily for our project presentation and is unlikely to be useful for anyone else. Still, it is included here for posterity's sake.
+
+
 ## Getting Started
 
 Work off of the code from Update01 Branch - this is the most recent and most up-to-date set of code.
