@@ -28,6 +28,17 @@ E.g., for our proof of concept we compared high GC content genes from the Rat (R
 *we have not uploaded sample genome data here due to file size, but here is the link to the Ensembl page where we downloaded our Rat genome: http://www.ensembl.org/Rattus_norvegicus/Info/Index and here is a link to the latest genome assembly of the Fat Sand Rat from NCBI: ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/002/215/935/GCA_002215935.1_ASM221593v1/GCA_002215935.1_ASM221593v1_genomic.fna.gz*
 
 
+## Notes on the Versions
+
+There are two sets of scripts, each saved in it's own branch. This README.md is for all of tthem. - one in which all the query sequences from one species are in the same file & that query file as a whole gets BLASTed against the genome of interest and another where each query sequence is in a separate file and each separate query gets BLASTed against the genome of interest. 
+
+This is because we realized BLAST might find some of the shorter query sequences multiple times in each genome, thereby artificially altering the hit count. So we changed it to BLAST each query separately, that way we can take it as a binary output - were there hits or not - for each query. 
+
+Original - Main Branch: all query sequences in one file, this file gets BLASTed against species of interest genome, number of hits taken, percentage of hits calculated.
+
+Update01 - Update01 Branch: query sequences in separate files, each file gets BLASTed against sepecies of interest genome, binary statistics calculations - were there hits or not? <-- meant to control for the same query sequence potentially popping up multiple times in the genome
+
+
 ## Getting Started
 
 Work off of the code from Update01 Branch - this is the most recent and most up-to-date set of code.
@@ -42,15 +53,6 @@ import os
 ```
 in that script (included in the code uploaded here).
 
-## Notes on the Versions
-
-There are two sets of scripts, each saved in it's own branch. This README.md is for all of tthem. - one in which all the query sequences from one species are in the same file & that query file as a whole gets BLASTed against the genome of interest and another where each query sequence is in a separate file and each separate query gets BLASTed against the genome of interest. 
-
-This is because we realized BLAST might find some of the shorter query sequences multiple times in each genome, thereby artificially altering the hit count. So we changed it to BLAST each query separately, that way we can take it as a binary output - were there hits or not - for each query. 
-
-Original - Main Branch: all query sequences in one file, this file gets BLASTed against species of interest genome, number of hits taken, percentage of hits calculated.
-
-Update01 - Update01 Branch: query sequences in separate files, each file gets BLASTed against sepecies of interest genome, binary statistics calculations - were there hits or not? <-- meant to control for the same query sequence potentially popping up multiple times in the genome
 
 ## Running the Code
 
