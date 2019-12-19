@@ -1,3 +1,7 @@
+#code to output results of BLAST and calculate percent query alignments:
+
+#function to output BLAST results
+
 def outputResults(Fasta1):
 	with open(Fasta1, "r") as f:
 		reader = 0
@@ -18,6 +22,7 @@ counter = outputResults("../Rodent/rat_blast/output_blast.txt")
 
 
 
+#function to calculate percent query alignments:
 
 def blastStatistics(species, counter):
 	with open(species + "_query_counter.txt", "r") as f, open(species + "_%_genes_found.txt", "w") as g:
