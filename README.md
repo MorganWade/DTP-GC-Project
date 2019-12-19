@@ -1,11 +1,17 @@
 # # Exploring GC-biased mutation across the metazoa
 
-Code & documentation for the Dark Gene Brigade's DTP Michaelmas 2019 Bioninformatics Hackathon project: Exploring GC-biased mutation across the metazoa. Project members: Jack Gordon, Jacques Bouvier, Joe Morford, Morgan Wade, Ryan Carter, Sam Caygill.
+Code & documentation for the Dark Gene Brigade's DTP Michaelmas 2019 Bioinformatics Hackathon project: Exploring GC-biased mutation across the metazoa. Project members: Jack Gordon, Jacques Bouvier, Joe Morford, Morgan Wade, Ryan Carter, Sam Caygill.
 
 Aim: Build a tool which is able to 1) Identify GC rich genes in a reference genome, 2) Search for these genes in a species of interest.
 
 Approach: 1) Python programme to identify GC rich genes, 2) BLAST analysis to search for genes in genome of interest
 
+Background:
+
+GC rich genes are more likely to be missing from genome assemblies. This is a well-known phenomena in many bird and honey bee species where only recently have scientists been able to produce assemblies containing these GC-rich genes. However, the same is true in gerbils - specifically the Fat Sand Rat, Psammomys obesus, which is known to have unusually high GC content around the ParaHox Gene cluster (Hargreaves et al, 2017).
+
+About the project:
+This is a set of code which searches a reference species' cDNA genome for genes which have a high GC content (defined as GC content > 0.750) then uses these sequencces as queries against the species of interest genome assembly to see if these high GC content regions have been conserved across the species. In our case, we did our project comparing the well-studied and well-sequenced Rat (Rattus norvegicus) against the comparatively poorly-studied Fat Sand Rat (Psammomys obesus).
 
 ## Getting Started
 
@@ -25,6 +31,11 @@ import os
 ```
 in that script (included in the code uploaded here).
 
+## Notes on the Versions
+
+There are two sets of scripts - one in which all the query sequences from one species are in the same file & that query file as a whole gets BLASTed against the genome of interest and another where each query sequence is in a separate file and each separate query gets BLASTed against the genome of interest. 
+
+This is because we realized BLAST might find some of the shorter query sequences multiple times in each genome, thereby artificially altering the hit count. So we changed it to BLAST each query separately, that way we can take it as a binary output - were there hits or not - for each query. 
 
 ## Running the Code
 
@@ -48,3 +59,6 @@ Jack Gordon, Jacques Bouvier, Joe Morford, Morgan Wade, Ryan Carter, Sam Caygill
 * Thanks to Adam Hargreaves, our Bioinformatics course lecturer and coordinator, whose work inspired this project and who's P. obesus genome assembly plays a large role in it
 * Thanks to PurpleBooth for the README.md template - https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
 
+## References
+
+* Hargreaves et al (2017) Genome sequence of a diabetes-prone rodent reveals a mutation hotspot around the ParaHox gene cluster. PNAS 114 (29) 7677-7682. https://doi.org/10.1073/pnas.1702930114 
