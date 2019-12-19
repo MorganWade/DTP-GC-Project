@@ -47,6 +47,7 @@ Scripts to generate:
 - random samples of genes from the reference genome to create a null distribution of % hits to see if GC-rich rat genes are less likely to be found in the gerbil genome than are GC-normal genes
 - the data needed to run a general linear model on sequence length and GC content to determine if sequence length is a better predictor of missing genes than GC content
 
+--> The actual statistics were calculated in R using the generated data (no original code, standard R functions)
 
 Branches:
 
@@ -54,7 +55,7 @@ Main Branch = original approach: all query sequences in one file, this file gets
 
 Update01 Branch = Update01 : query sequences in separate files, each file gets BLASTed against sepecies of interest genome, binary statistics calculations - were there hits or not? <-- meant to control for the same query sequence potentially popping up multiple times in the genome
 
-Stats Branch = Stats
+Stats Branch = Stats scripts
 
 ## Getting Started
 
@@ -89,11 +90,12 @@ However, it is unlikely these genes are actually missing - more likely they have
 
 Q2: Are GC genes more likely to be missing?
 
-Result: We also used our tool to see if GC rich genes were more likely to be missing compared to random samples of genes from the reference genome. To do this, we conducted queries using GC rich genes and compared the hit % to the hit % for a series of random samples of genes from the same rat genome. This confirmed earlier observations mentioned in the introduction that GC rich genes were more likely to be missing from genome assemblies. 
+Approach & Result: We also used our tool to see if GC rich genes were more likely to be missing compared to random samples of genes from the reference genome. To do this, we conducted queries using GC rich genes and compared the hit % to the hit % for a series of random samples of genes from the same rat genome. This confirmed earlier observations mentioned in the introduction that GC rich genes were more likely to be missing from genome assemblies. Statistics run in R.
 
 Q3: Are these results potentially confounded by sequence length?
 
-Result: 
+Approach & Result: Mean sequence length of 13 very GC rich rat genes considerably lower than average length of rat genes - could sequence length be confounding our results about GC content? We used our tool to randomly pull 2000 rat genes & their lengths & GC contents and query them against the gerbil genome. We then performed a general linear model on that data determine whether sequence length was a better predictor of missing genes than GC content and found that, yes, sequence length is a better predictor of missing genes than GC content. 
+
 
 ## Authors
 
