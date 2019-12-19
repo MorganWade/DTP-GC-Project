@@ -11,6 +11,7 @@ Background:
 GC rich genes are more likely to be missing from genome assemblies. This is a well-known phenomena in many bird and honey bee species where only recently have scientists been able to produce assemblies containing these GC-rich genes. However, the same is true in gerbils - specifically the Fat Sand Rat, Psammomys obesus, which is known to have unusually high GC content around the ParaHox Gene cluster (Hargreaves et al, 2017).
 
 About the project:
+
 This is a set of code which searches a reference species' cDNA genome for genes which have a high GC content (defined as GC content > 0.750) then uses these sequencces as queries against the species of interest genome assembly to see if these high GC content regions have been conserved across the species. In our case, we did our project comparing the well-studied and well-sequenced Rat (Rattus norvegicus) against the comparatively poorly-studied Fat Sand Rat (Psammomys obesus).
 
 ## Getting Started
