@@ -34,9 +34,13 @@ in that script (included in the code uploaded here).
 
 ## Notes on the Versions
 
-There are two sets of scripts - one in which all the query sequences from one species are in the same file & that query file as a whole gets BLASTed against the genome of interest and another where each query sequence is in a separate file and each separate query gets BLASTed against the genome of interest. 
+There are two sets of scripts, each saved in it's own branch. This README.md is for all of tthem. - one in which all the query sequences from one species are in the same file & that query file as a whole gets BLASTed against the genome of interest and another where each query sequence is in a separate file and each separate query gets BLASTed against the genome of interest. 
 
 This is because we realized BLAST might find some of the shorter query sequences multiple times in each genome, thereby artificially altering the hit count. So we changed it to BLAST each query separately, that way we can take it as a binary output - were there hits or not - for each query. 
+
+Original - Main Branch: all query sequences in one file, this file gets BLASTed against species of interest genome, number of hits taken, percentage of hits calculated.
+
+Update01 - Update01 Branch: query sequences in separate files, each file gets BLASTed against sepecies of interest genome, binary statistics calculations - were there hits or not? <-- meant to control for the same query sequence potentially popping up multiple times in the genome
 
 ## Running the Code
 
