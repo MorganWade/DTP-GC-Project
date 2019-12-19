@@ -74,7 +74,7 @@ Q2: Are GC genes more likely to be missing?
 
 Result: We also used our tool to see if GC rich genes were more likely to be missing compared to random samples of genes from the reference genome. To do this, we conducted queries using GC rich genes and compared the hit % to the hit % for a series of random samples of genes from the same rat genome. This confirmed earlier observations mentioned in the introduction that GC rich genes were more likely to be missing from genome assemblies. 
 
-Q3: Is GC content confounded by sequence length?
+Q3: Are these results potentially confounded by sequence length?
 
 Result: 
 
