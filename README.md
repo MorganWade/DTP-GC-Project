@@ -38,6 +38,11 @@ There are two sets of scripts - one in which all the query sequences from one sp
 
 This is because we realized BLAST might find some of the shorter query sequences multiple times in each genome, thereby artificially altering the hit count. So we changed it to BLAST each query separately, that way we can take it as a binary output - were there hits or not - for each query. 
 
+Original: all query sequences in one file, this file gets BLASTed against species of interest genome, number of hits taken, percentage of hits calculated.
+
+Update01: query sequences in separate files, each file gets BLASTed against sepecies of interest genome, binary statistics calculations - were there hits or not? <-- mean to control for the same query sequence potentially popping up multiple times in the genome
+
+
 ## Running the Code
 
 Create a directory for your project as a whole, e.g., 'GC_Project' and within that directory make a subdirectory called 'Code' and another for each species you will BLAST your species of interest against, e.g., 'Rat'. Save all the code files to the 'Code' directory and save your genomes of your reference species and species of interest into the 'Rat' directory.
