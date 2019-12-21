@@ -49,15 +49,9 @@ Scripts to generate:
 
 --> The actual statistics were calculated in R using the generated data (no original code, standard R functions)
 
-Branches:
 
-Main Branch = original approach: all query sequences in one file, this file gets BLASTed against species of interest genome, number of hits taken, percentage of hits calculated.
-
-Update01 Branch = Update01 : query sequences in separate files, each file gets BLASTed against sepecies of interest genome, binary statistics calculations - were there hits or not? <-- meant to control for the same query sequence potentially popping up multiple times in the genome
-
-Stats Branch = Stats scripts
-
-mappingGCcontentTOchromosomes : Branch containing an R script and a python3 script for generating histograms of frequency of GC content across chromosomes for the Rat (Rattus norvegicus) genome. This is useful primarily for our project presentation and is unlikely to be useful for anyone else. Still, it is included here for posterity's sake.
+*ChromosomeHistogram*
+Python and R scripts to generate histograms mapping the high GC content genes to their respective chromosomes. Includes one that corrects for chromosome length
 
 
 ## Getting Started
