@@ -30,7 +30,7 @@ E.g., for our proof of concept we compared high GC content genes from the Rat (R
 
 ## Notes on the Versions
 
-There are three sets of scripts, each saved in it's own branch. This README.md is for all of them. 
+There are two sets of code, the original version and an updated verison. There are also two additional folders, one for generating anull distribution to run statistics on the BLAST results and another for analyzing GC content across the chromosomes in a genome. This README.md is for all of them. 
 
 *The original approach:*
 All the query sequences from one species are in the same file & that query file as a whole gets BLASTed against the genome of interest 
@@ -56,12 +56,13 @@ Python and R scripts to generate histograms mapping the high GC content genes to
 
 ## Getting Started
 
-Work off of the code from Update01 Branch - this is the most recent and most up-to-date set of code.
+Work off of the code from Update01 Branch - this is the most recent and up-to-date set of code.
 
 We worked on a Linux Ubuntu system. The code is written for Python 3 and meant to be saved as a script and then run from the command line:
 ```
 python3 1_extract_new_genes.py
 ```
+The scripts require importing various python and R packages. For example:
 In order to run the BLAST you will need to include:
 ```
 import os
